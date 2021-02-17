@@ -8,8 +8,6 @@
 <% end %>
 </ul>
 
-<%= link_to "+ Add a review", new_restaurant_review_path(@restaurant)  %>
-<br>
 <%= link_to "Back to the list", restaurants_path  %>
 
 
@@ -18,4 +16,10 @@
   <p>Rating: <%= review.rating %></p>
   <p>Review: <%= review.content %></p>
 </div>
+<% end %>
+
+<%= simple_form_for ([ @restaurant, @review ]) do |f| %>
+  <%= f.input :rating, collection: (0..5) %>
+  <%= f.input :content %>
+  <%= f.submit %>
 <% end %>

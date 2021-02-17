@@ -11,3 +11,15 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.card {
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+form {
+  border: 1px solid rgba(0,0,0,0.5);
+  margin-top: 50px;
+  padding: 50px;
+
+}
