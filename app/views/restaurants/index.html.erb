@@ -1,9 +1,4 @@
-<h1>Welcome to Welp - The better version of Yelp</h1>
-
 <h3>Here's the list of restaurants we have on file: </h3>
-
-<%= link_to "+ Add a restaurant", new_restaurant_path  %>
-
 <ul>
   <% @restaurants.each do |restaurant|  %>
     <li><%= link_to restaurant.name , restaurant_path(restaurant)  %> - <%= restaurant.category %> - <%= restaurant.address %></li>
